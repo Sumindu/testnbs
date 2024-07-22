@@ -198,11 +198,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($stmt->execute() === TRUE) {
             echo "<div class='alert alert-success'>Record Updated successfully</div>";
-            header("Location: index.php?msg=update_success");
+            header("Location: home.php?msg=update_success");
             exit; // Ensure script stops after redirect
         } else {
             echo "<div class='alert alert-danger'>Error creating record: " . $stmt->error . "</div>";
-            header("Location: index.php?msg=update_fail"); 
+            header("Location: home.php?msg=update_fail"); 
             exit;
         }
 
@@ -529,7 +529,7 @@ if ($result && $result->num_rows > 0) {
 
 
             <input type="submit" class="btn btn-primary btn-lg float-end" value="Update">
-            <a href="index.php" class="btn btn-secondary btn-lg">Cancel</a>
+            <a href="home.php" class="btn btn-secondary btn-lg">Cancel</a>
         </form> 
 
                     </div> 

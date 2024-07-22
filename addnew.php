@@ -166,11 +166,11 @@ include 'db.php';
 
 
         if ($stmt->execute() === TRUE) {
-            // Redirect to index.php with success message
-            header("Location: index.php?msg=add_success");
+            // Redirect to home.php with success message
+            header("Location: home.php?msg=add_success");
             exit;
         } else {
-            header("Location: index.php?msg=add_fail");
+            header("Location: home.php?msg=add_fail");
             exit;
             echo "<div class='alert alert-danger'>Error updating record: " . $conn->error . "</div>";
         }
@@ -422,7 +422,7 @@ include 'db.php';
         </table>
 
         <input type="submit" class="btn btn-primary btn-lg float-end" value="Save">
-        <a href="index.php" class="btn btn-secondary btn-lg">Cancel</a>
+        <a href="home.php" class="btn btn-secondary btn-lg">Cancel</a>
     </form>
     </div> 
                 </div>
